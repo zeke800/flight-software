@@ -1,6 +1,4 @@
 import cv2
-import imutils
-import time
 
 #Camera settings
 camera_id = 0
@@ -14,4 +12,5 @@ def take_pic():
     image = image_path+"/"+image_id+".jpg"
     cv2.imwrite(image, frame)
     cap.release()
+    image_id = image_id + 1
     return image
